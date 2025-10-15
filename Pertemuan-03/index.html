@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Marsya</title>
 </head>
+
 <body>
     <header>
         <h1>Ini Header</h1>
@@ -37,10 +39,27 @@
         <section id="Contact">
             <h2>Kontak Kami</h2>
             <p>Contoh Form</p>
+            <h2>Kontak Kami</h2>
+            <form action="" method="GET">
+                <label for="txtnama">Nama:</label>
+                <input type="text" id="txtnama" name="txtnama" placeholder="Masukkan nama" required autocomplete="name">
+
+                <label for="txtemail">Email:</label>
+                <input type="email" id="txtemail" name="txtemail" placeholder="Masukkan email" required
+                    autocomplete="email">
+
+                <label for="txtpesan">Pesan:</label>
+                <textarea id="txtpesan" name="txtpesan" rows="4" placeholder="Tuliskan Pesan anda..."
+                    required></textarea>
+
+                <button type="submit">Kirim</button>
+                <button type="reset">Batal</button>
+            </form>
         </section>
-        </main>
-        <footer>
-            <p>&copy; 2025 Marsya Maharani [2511500080]</p>
-        </footer>
+    </main>
+    <footer>
+        <p>&copy; 2025 Marsya Maharani [2511500080]</p>
+    </footer>
 </body>
+
 </html>
