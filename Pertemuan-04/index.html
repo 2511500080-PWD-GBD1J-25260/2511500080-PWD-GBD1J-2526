@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Marsya Maharani</title>
+    <style>
+        #about,
+        #Contact {
+
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 700px;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        #about h2,
+        #Contact h2 {
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 6px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        #about p,
+        #Contact label {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0;
+            padding: 6px 0;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        #about strong,
+        #Contact label>span {
+            min-width: 180px;
+            color: #003366;
+            font-weight: 600;
+            text-align: right;
+            padding-right: 16px;
+            flex-shrink: 0;
+        }
+
+        #Contact input,
+        #Contact textarea {
+            flex: 1;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 8px;
+            color: #000;
+            font-weight: normal;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        #Contact button {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            margin-right: 8px;
+        }
+
+        #Contact button[type="submit"] {
+            background-color: #003366;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        #Contact button[type="reset"] {
+            background-color: #b4b4b4;
+            color: #272727;
+            font-weight: 500;
+        }
+
+        #Contact button[type="submit"]:hover {
+            background-color: #0379ee;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        #Contact button[type="reset"]:hover {
+            background-color: #cccccc;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 600px) {
+            
+            #about p,
+            #Contact label {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #about strong,
+            #Contact label>span {
+                text-align: left;
+                padding-right: 0;
+                margin-bottom: 4px;
+            }
+
+            #Contact input,
+            #Contact textarea,
+            #Contact button {
+                width: 100%;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Ini Header</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#Contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Selamat datang</h2>
+            <p>Ini contoh paragraf HTML.</p>
+        </section>
+        <section id="about">
+            <h2>Tentang Saya</h2>
+            <p><strong>NIM:</strong> 2511500080.</p>
+            <p><strong>Nama Lengkap:</strong> Marsya Maharani</p>
+            <p><strong>Tempat Lahir:</strong> Pangkalpinang</p>
+            <p><strong>Tanggal Lahir:</strong> 05 Maret 2007</p>
+            <p><strong>Hobi:</strong> Memasak</p>
+            <p><strong>Pasangan:</strong> ada</p>
+            <P><strong>Pekerjaan:</strong> Mahasiswa &copy; 2025</P>
+            <p><strong>Nama Orang Tua</strong> Bapak Syahrial dan Ibu Yesi</p>
+            <p><strong>Nama Kakak:</strong> Ikhsan</p>
+            <p><strong>Nama Adik:</strong> Regina Putri</p>
+        </section>
+        <section id="Contact">
+            <section id="contact">
+                <h2>Kontak Kami</h2>
+                <form action="" method="GET">
+                    <label for="txtNama"><span>Nama:</span>
+                        <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required
+                            autocomplete="name">
+                    </label>
+                    <label for="txtEmail"><span>Email:</span>
+                        <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required
+                            autocomplete="email">
+                    </label>
+                    <label for="txtPesan"><span>Pesan Anda:</span>
+                        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..."
+                            required></textarea>
+                    </label>
+                    <button type="submit">Kirim</button>
+                    <button type="reset">Batal</button>
+                </form>
+            </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Marsya Maharani [2511500080]</p>
+    </footer>
+</body>
+
+</html>
