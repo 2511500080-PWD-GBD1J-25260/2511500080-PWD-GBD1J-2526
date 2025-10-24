@@ -121,7 +121,13 @@
             transform: translateY(-1px);
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 600px) { 
+            header {
+                padding: 16px;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
             
             #about p,
             #Contact label {
@@ -147,7 +153,7 @@
         color: #aaa;
         text-align: center;
         padding: 10px;
-        
+
     }
 
         header li a:hover {
@@ -166,5 +172,6 @@
         header li a:active {
             background-color: #cc04a1;
             transform: translateY(1px);
+
         }
     
