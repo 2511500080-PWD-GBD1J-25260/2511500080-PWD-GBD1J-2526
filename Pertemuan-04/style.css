@@ -30,7 +30,7 @@
             text-decoration: none;
             padding: 6px 12px;
         }
-        
+        #home,
         #about,
         #Contact {
 
@@ -41,7 +41,7 @@
             margin: 20px auto;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
+        #home h2,
         #about h2,
         #Contact h2 {
             color: #003366;
@@ -50,7 +50,9 @@
             margin-top: 0;
             margin-bottom: 16px;
         }
-
+#home p {
+            text-align: justify;
+        }
         #about p,
         #Contact label {
             display: flex;
