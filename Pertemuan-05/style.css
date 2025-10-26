@@ -198,7 +198,10 @@ header li a:active {
         width: 100%;
         padding: 5px 0;
     }
-    
+    nav.active {
+        display: flex;
+    }
+
     #about p,
     #Contact label {
         flex-direction: column;
