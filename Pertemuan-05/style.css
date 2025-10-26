@@ -188,9 +188,10 @@ header li a:active {
         display: block;
         position: absolute;
         left: 16px;
-        top: 8px;
-    }
-
+        top
+        : 8px;
+    } 
+    
     nav {
         display: none;
         flex-direction: column;
