@@ -64,7 +64,7 @@ box-sizing: border-box;
 
 #about strong,
 #contact label>span {
-text-align: left;
+text-align: right;
 padding-right: 0;
 margin-bottom: 2px;
 }
