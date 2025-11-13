@@ -15,5 +15,6 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
     <li>menambahkan from input</li>
     <li>menambahkan ke dalam komentar hasilnya laragon</li>
     <li>mengklik tombol kirim dan batal</li>
+    <li>mengisi biodata sederhana mahasiswa</li>
     <li>mengubah style.css</li>
 </ol>
