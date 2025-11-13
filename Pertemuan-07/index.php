@@ -77,46 +77,7 @@ endif;
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
-    <section id="about">
-      <h2>Tentang Kamu</h2>
-      <p><strong>NIM:</strong><?php echo $sesnim ?></p>
-      <p><strong>Nama:</strong><?php echo $sesnama ?></p>
-      <p><strong>Tempat Lahir:</strong><?php echo $sesTempat_lahir ?></p>
-      <p><strong>Tanggal Lahir:</strong><?php echo $sesTempat_lahir ?></p>
-      <p><strong>Hobi:</strong><?php echo $sesHobi ?></p>
-      <p><strong>Pasangan:</strong><?php echo $sesPasangan ?></p>
-      <p><strong>Pekerjaan:</strong><?php echo $sesPekerjaan ?></p>
-      <p><strong>Nama Orang Tua:</strong><?php echo $sesNama_ortu ?></p>
-      <p><strong>Nama Kakak:</strong><?php echo $sesNama_kakak ?></p>
-      <p><strong>Nama Adik:</strong><?php echo $sesNama_adik ?></p>
-    </section>
-
-
-
-    <section id="contact">
-      <h2>Kontak Kami</h2>
-      <form action="" method="GET">
-
-        <label for="txtNama"><span>Nama:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
-        </label>
-
-        <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
-        </label>
-
-        <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
-          <small id="charCount">0/200 karakter</small>
-        </label>
-
-
-        <button type="submit">Kirim</button>
-        <button type="reset">Batal</button>
-      </form>
-    </section>
-
-    <section id="aboutyou">
+<section id="aboutyou">
       <h2>Entry Data Mahasiswa</h2>
 
       <form action="proses.php" method="post">
@@ -159,6 +120,47 @@ endif;
     </section>
 
 
+
+    <section id="about">
+      <h2>Tentang Kamu</h2>
+      <p><strong>NIM:</strong><?php echo $sesnim ?></p>
+      <p><strong>Nama:</strong><?php echo $sesnama ?></p>
+      <p><strong>Tempat Lahir:</strong><?php echo $sesTempat_lahir ?></p>
+      <p><strong>Tanggal Lahir:</strong><?php echo $sesTempat_lahir ?></p>
+      <p><strong>Hobi:</strong><?php echo $sesHobi ?></p>
+      <p><strong>Pasangan:</strong><?php echo $sesPasangan ?></p>
+      <p><strong>Pekerjaan:</strong><?php echo $sesPekerjaan ?></p>
+      <p><strong>Nama Orang Tua:</strong><?php echo $sesNama_ortu ?></p>
+      <p><strong>Nama Kakak:</strong><?php echo $sesNama_kakak ?></p>
+      <p><strong>Nama Adik:</strong><?php echo $sesNama_adik ?></p>
+    </section>
+
+
+
+    <section id="contact">
+      <h2>Kontak Kami</h2>
+      <form action="" method="GET">
+
+        <label for="txtNama"><span>Nama:</span>
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+        </label>
+
+        <label for="txtEmail"><span>Email:</span>
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+        </label>
+
+        <label for="txtPesan"><span>Pesan Anda:</span>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+          <small id="charCount">0/200 karakter</small>
+        </label>
+
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </form>
+    </section>
+
+    
 
   </main>
 
