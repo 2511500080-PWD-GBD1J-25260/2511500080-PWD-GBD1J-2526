@@ -11,5 +11,9 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>silahkan diisi sesuai proses pengerjaan kalian masing-masing</li>
   <li>download + extract bahan uts pwd</li>
   <li>menambahkan di index.php section baru<li>
+  <li>menambahkan from biodata di proses.php<li>
+  <li>menampilkan proses.php tadi kedalam komentar<li>
+  <li>proses kirim<li>
+  <li>mengubah style.css<li>
 
 </ol>
