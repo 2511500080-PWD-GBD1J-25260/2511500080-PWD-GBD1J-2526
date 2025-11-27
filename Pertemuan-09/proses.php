@@ -20,6 +20,10 @@ $arrBiodata = [
 "adek"=> $_POST["txtNmAdik"]; ?? ""
 ];
 
+($dataBiodata $k $v) {
+    echo "<P><strong>$k</strong> : $v</p>";
+}
+
 $_SESSION["txtNim"] = $txtNim;
 $_SESSION["txtNmLengkap"] = $txtNmLengkap;
 $_SESSION["txtT4Lhr"] = $txtT4Lhr;
