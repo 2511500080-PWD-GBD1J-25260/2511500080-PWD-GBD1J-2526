@@ -24,6 +24,9 @@ $arrBiodata = [
     echo "<P><strong>$k</strong> : $v</p>";
 }
 
+$_SESSION["biodata"] = $arrBiodata;
+header("location: index.php#about");
+
 $_SESSION["txtNim"] = $txtNim;
 $_SESSION["txtNmLengkap"] = $txtNmLengkap;
 $_SESSION["txtT4Lhr"] = $txtT4Lhr;
