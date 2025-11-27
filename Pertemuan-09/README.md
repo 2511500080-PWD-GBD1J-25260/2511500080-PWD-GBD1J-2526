@@ -15,5 +15,6 @@
   Nim : 2511500080 <br>
   Nama : Marsya Maharani <br>
   Hari ini tanggal 27/11/2025, saya mempelajari: <br>
-  <li>Mengubah data POST ke array associative</li>
+  <li>mengubah data POST ke array associative</li>
+  <li>menghapus dan menambah $session ("Biodata") = $arrBiodata yang lebih efisien</li>
 </ol>
