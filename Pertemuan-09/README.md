@@ -16,5 +16,6 @@
   Nama : Marsya Maharani <br>
   Hari ini tanggal 27/11/2025, saya mempelajari: <br>
   <li>mengubah data POST ke array associative</li>
-  <li>menghapus dan menambah $session ("Biodata") = $arrBiodata yang lebih efisien</li>
+  <li>menghapus dan menambah $session ("Biodata") = arrBiodata yang lebih efisien</li>
+  <li>menghapus dan menambahkan session baru di baris 19-67</li>
 </ol>
