@@ -126,7 +126,7 @@ endif;
       <p><strong>NIM:</strong><?php echo $sesnim ?></p>
       <p><strong>Nama:</strong><?php echo $sesnama ?></p>
       <p><strong>Tempat Lahir:</strong><?php echo $sesTempat_lahir ?></p>
-      <p><strong>Tanggal Lahir:</strong><?php echo $sesTempat_lahir ?></p>
+      <p><strong>Tanggal Lahir:</strong><?php echo $sesTanggal_lahir ?></p>
       <p><strong>Hobi:</strong><?php echo $sesHobi ?></p>
       <p><strong>Pasangan:</strong><?php echo $sesPasangan ?></p>
       <p><strong>Pekerjaan:</strong><?php echo $sesPekerjaan ?></p>
