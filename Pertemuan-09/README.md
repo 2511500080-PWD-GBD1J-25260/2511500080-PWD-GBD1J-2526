@@ -24,4 +24,5 @@
   <li>menambahkan kode baru lagi difungsi.php</li>
   <li>menambahkan kode fungsi.php untuk merender hasil atau output biodata</li>
   <li>menghapus dan menambahkan baris 123-129 pada index.php</li>
+  <lI>menambahkan kode index.php diawal baris awal file</li>
 </ol>
