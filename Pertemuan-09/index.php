@@ -106,7 +106,7 @@ endif;
     <?php
     $biodata = $_SESSION["biodata"] ?? [];
 
-    $_fieldConfig = [
+    $fieldConfig = [
       "nim" => ["label" => "NIM:", "suffix" => ""],
       "nama" => ["label" => "Nama Lengkap:", "suffix" => " $#128526;"],
       "tempat" => ["label" => "Tempat Lahir:", "suffix" => ""],
