@@ -22,4 +22,5 @@
   <li>menghapus baris 130-140</li>
   <li>menambahkan file baru dipertemuan-09 dan menambahkan kode baru"</li>
   <li>menambahkan kode baru lagi difungsi.php</li>
+  <li>menambahkan kode fungsi.php untuk merender hasil atau output biodata</li>
 </ol>
