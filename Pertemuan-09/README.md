@@ -20,5 +20,6 @@
   <li>menghapus dan menambahkan session baru di baris 19-67</li>
   <li>menambahkan kode baru untuk menampilkan array menggunakan looping foreach</li>
   <li>menghapus baris 130-140</li>
-  <li>menambahkan file baru dipertemuan-09 dan menambahkan kode baru"
+  <li>menambahkan file baru dipertemuan-09 dan menambahkan kode baru"</li>
+  <li>menambahkan kode baru lagi difungsi.php</li>
 </ol>
