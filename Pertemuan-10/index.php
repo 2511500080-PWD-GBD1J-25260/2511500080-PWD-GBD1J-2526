@@ -85,7 +85,6 @@ require_once __DIR__ . '/fungsi.php';
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
-
     </section>
 
     <?php
@@ -101,7 +100,7 @@ require_once __DIR__ . '/fungsi.php';
       "pekerjaan" => ["label" => "Pekerjaan:", "suffix" => " &copy; 2025"],
       "ortu" => ["label" => "Nama Orang Tua:", "suffix" => ""],
       "kakak" => ["label" => "Nama Kakak:", "suffix" => ""],
-      "adek" => ["label" => "Nama Adik:", "suffix" => ""],
+      "adik" => ["label" => "Nama Adik:", "suffix" => ""],
     ];
     ?>
 
@@ -112,18 +111,19 @@ require_once __DIR__ . '/fungsi.php';
 
     <section id="contact">
       <h2>Kontak Kami</h2>
-
       <form action="proses.php" method="POST">
+
         <label for="txtNama"><span>Nama:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan Nama" required>
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
         </label>
 
         <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan Email" required>
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
         </label>
 
-        <label for="txtPesan"><span>Pesan:</span>
-          <textarea id="txtPesan" name="txtPesan" placeholder="Masukkan Pesan" required></textarea>
+        <label for="txtPesan"><span>Pesan Anda:</span>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+          <small id="charCount">0/200 karakter</small>
         </label>
 
         <button type="submit">Kirim</button>
@@ -131,22 +131,19 @@ require_once __DIR__ . '/fungsi.php';
       </form>
 
       <?php
-      $kontak = $_SESSION["kontak"] ?? [];
+      $contact = $_SESSION["contact"] ?? [];
 
-      $fieldkontak = [
+      $fieldContact = [
         "nama" => ["label" => "Nama:", "suffix" => ""],
         "email" => ["label" => "Email:", "suffix" => ""],
-        "pesan" => ["label" => "Pesan Anda:", "suffix" => ""],
+        "pesan" => ["label" => "Pesan Anda:", "suffix" => ""]
       ];
       ?>
 
       <br>
       <hr>
       <h2>Yang menghubungi kami</h2>
-      <?= tampilkanBiodata($fieldkontak, $kontak) ?>
-
-
-
+      <?= tampilkanBiodata($fieldContact, $contact) ?>
     </section>
   </main>
 
