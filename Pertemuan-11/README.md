@@ -4,5 +4,5 @@ Nim : 2511500080 <br>
   Hari ini tanggal 11/12/2025, saya mempelajari: <br>
   <ol>
 <li>mengupdate fungsi.php</li>
-
+<li>menambahkan penangkap pesan sukses/gagal</li>
 <ol>
