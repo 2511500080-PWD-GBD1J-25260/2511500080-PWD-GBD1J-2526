@@ -7,4 +7,5 @@ Nim : 2511500080 <br>
 <li>menambahkan penangkap pesan sukses/gagal</li>
 <li>menampilkan flash message</li>
 <li>menampilkan nilai lama dari form untuk antisipasi jika error</li>
+<li>cek request method</li>
 <ol>
