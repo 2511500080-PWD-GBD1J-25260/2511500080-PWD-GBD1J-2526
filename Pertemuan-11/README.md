@@ -5,4 +5,5 @@ Nim : 2511500080 <br>
   <ol>
 <li>mengupdate fungsi.php</li>
 <li>menambahkan penangkap pesan sukses/gagal</li>
+<li>menampilkan flash message</li>
 <ol>
