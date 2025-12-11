@@ -8,5 +8,5 @@ Nim : 2511500080 <br>
 <li>membuat tabel tbl_tamu</li>
 <li>membuat file read.php</li>
 <li>membuat record pada tabel tbl_tamu</li>
-
+<li>Modif kode pada read_inc.php</li>
 <ol>
