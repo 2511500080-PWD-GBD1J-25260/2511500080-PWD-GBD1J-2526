@@ -5,3 +5,5 @@ Nim : 2511500080 <br>
   <ol>
 <li>menambahkan file dan kode baru dengan nama koneksi.php</li>
 <li>membuat database</li>
+<li>membuat tabel tbl_tamu</li>
+<ol>
