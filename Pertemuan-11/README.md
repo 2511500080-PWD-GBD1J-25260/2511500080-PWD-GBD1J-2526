@@ -8,4 +8,5 @@ Nim : 2511500080 <br>
 <li>menampilkan flash message</li>
 <li>menampilkan nilai lama dari form untuk antisipasi jika error</li>
 <li>cek request method</li>
+<li>ambil data $ post,trim, htmlspecialchars</li>
 <ol>
