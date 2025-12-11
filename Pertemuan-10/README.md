@@ -10,4 +10,5 @@ Nim : 2511500080 <br>
 <li>membuat record pada tabel tbl_tamu</li>
 <li>Modif kode pada read_inc.php</li>
 <li>ganti kode baris 146 di index.php</li>
+<li>menghapus kode baris 133-141</li>
 <ol>
