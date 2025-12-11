@@ -10,4 +10,5 @@ Nim : 2511500080 <br>
 <li>cek request method</li>
 <li>ambil data $ post,trim, htmlspecialchars</li>
 <li>menambahkan validasi</li>
+<li>INSERT tbl_tamu dengan prepared statement mysqli dan simpan pesan sukses/gagal ke $_SESSION sertaredirect balik ke index.php#contact</li>
 <ol>
