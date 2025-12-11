@@ -11,4 +11,6 @@ Nim : 2511500080 <br>
 <li>ambil data $ post,trim, htmlspecialchars</li>
 <li>menambahkan validasi</li>
 <li>INSERT tbl_tamu dengan prepared statement mysqli dan simpan pesan sukses/gagal ke $_SESSION sertaredirect balik ke index.php#contact</li>
+<li>menambahkan kolom nomor urut</li>
+<li>tambah field baru di tabel tbl_tamu</li>
 <ol>
