@@ -10,4 +10,5 @@
   <li>mengubah isi file delete</li>
   <li>menambahkan kode baru diread.php</li>
   <li>memperbaiki file proses_delete.php</li>
+  <li>menambahkan konfirmasi penghapusan</li>
   <ol>
