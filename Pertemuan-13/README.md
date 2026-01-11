@@ -4,4 +4,4 @@
   NIM: 2511500080<br>
   <ol>
   <li>import sql bahan praktikum pertemuan-13</li>
-  <li>
+  <li>menambahkan proses delete</li>
