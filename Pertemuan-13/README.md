@@ -8,4 +8,5 @@
   <li>menambahkan file baru proses delete</li>
   <li>mengcopy file update dan disalin ke delete</li>
   <li>mengubah isi file delete</li>
+  <li>menambahkan kode baru diread.php</li>
   <ol>
