@@ -6,4 +6,5 @@
   <li>import sql bahan praktikum pertemuan-13</li>
   <li>menambahkan proses delete</li>
   <li>menambahkan file baru proses delete</li>
+  <li>mengcopy file update dan disalin ke delete</li>
   <ol>
