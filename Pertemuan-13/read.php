@@ -47,13 +47,13 @@
       <td><?= $i++ ?></td>
       <td>
         <a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
-        <a onclick="return confirm('Hapus?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
-      </td
+        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
+      </td>
       <td><?= $row['cid']; ?></td>
       <td><?= htmlspecialchars($row['cnama']); ?></td>
       <td><?= htmlspecialchars($row['cemail']); ?></td>
       <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
-      <td><?= formatTanggal(htmlspecialchars($row['dcreated_at'])); ?></td>
+      <td><?= formatTanggal(htmlspecialchars($row['created_at'])); ?></td>
     </tr>
   <?php endwhile; ?>
 </table>
