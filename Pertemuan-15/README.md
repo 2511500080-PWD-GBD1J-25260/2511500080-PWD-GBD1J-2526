@@ -9,5 +9,5 @@ Nim: 251150080<br>
 <li>membuat tabel biodata diread.php</li>
 <li>menambahkan kode baru di file proses delete</li>
 <li>menambahkan kode baru di file edit</li>
-
+<li>menambahkan kode baru di file proses update</li>
 <ol>
