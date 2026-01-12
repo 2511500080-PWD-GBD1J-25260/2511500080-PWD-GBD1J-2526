@@ -1,138 +1,59 @@
 <?php
-/**
- * Halaman Read - Menampilkan Data Biodata Mahasiswa
- * Menampilkan semua data biodata mahasiswa dalam bentuk tabel
- * dengan link untuk edit dan delete
- */
+  session_start();
+  require 'koneksi.php';
+  require 'fungsi.php';
 
-session_start();
-require 'koneksi.php';
-require 'fungsi.php';
-
-// Query untuk mengambil semua data biodata mahasiswa
-$sql = "SELECT * FROM tbl_biodata_mahasiswa ORDER BY created_at DESC";
-$q = mysqli_query($conn, $sql);
-if (!$q) {
+  $sql = "SELECT * FROM tbl_tamu ORDER BY cid DESC";
+  $q = mysqli_query($conn, $sql);
+  if (!$q) {
     die("Query error: " . mysqli_error($conn));
-}
-
-// Ambil flash message
-$flash_sukses = $_SESSION['flash_sukses'] ?? '';
-$flash_error = $_SESSION['flash_error'] ?? '';
-unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
+  }
 ?>
 
-<!DOCTYPE html>
-<html lang="id">
+<?php
+  $flash_sukses = $_SESSION['flash_sukses'] ?? ''; #jika query sukses
+  $flash_error  = $_SESSION['flash_error'] ?? ''; #jika ada error
+  #bersihkan session ini
+  unset($_SESSION['flash_sukses'], $_SESSION['flash_error']); 
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Biodata Mahasiswa</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<?php if (!empty($flash_sukses)): ?>
+        <div style="padding:10px; margin-bottom:10px; 
+          background:#d4edda; color:#155724; border-radius:6px;">
+          <?= $flash_sukses; ?>
+        </div>
+<?php endif; ?>
 
-<body>
-    <header>
-        <h1>Data Biodata Mahasiswa</h1>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
-            &#9776;
-        </button>
-        <nav>
-            <ul>
-                <li><a href="index.php">Beranda</a></li>
-                <li><a href="read.php">Lihat Data</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php if (!empty($flash_error)): ?>
+        <div style="padding:10px; margin-bottom:10px; 
+          background:#f8d7da; color:#721c24; border-radius:6px;">
+          <?= $flash_error; ?>
+        </div>
+<?php endif; ?>
 
-    <main>
-        <section id="biodata">
-            <h2>Daftar Biodata Mahasiswa</h2>
-
-            <?php if (!empty($flash_sukses)): ?>
-                <div class="alert alert-success">
-                    <?= $flash_sukses; ?>
-                </div>
-            <?php endif; ?>
-
-            <?php if (!empty($flash_error)): ?>
-                <div class="alert alert-error">
-                    <?= $flash_error; ?>
-                </div>
-            <?php endif; ?>
-
-            <table border="1" cellpadding="8" cellspacing="0">
-                <tr>
-                    <th>No</th>
-                    <th>Aksi</th>
-                    <th>NIM</th>
-                    <th>Nama Lengkap</th>
-                    <th>Tempat Lahir</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Hobi</th>
-                    <th>Pasangan</th>
-                    <th>Pekerjaan</th>
-                    <th>Nama Orang Tua</th>
-                    <th>Nama Kakak</th>
-                    <th>Nama Adik</th>
-                    <th>Dibuat Pada</th>
-                </tr>
-                <?php $i = 1; ?>
-                <?php while ($row = mysqli_fetch_assoc($q)): ?>
-                    <tr>
-                        <td>
-                            <?= $i++ ?>
-                        </td>
-                        <td>
-                            <a href="edit.php?nim=<?= urlencode($row['nim']); ?>">Edit</a>
-                            <a onclick="return confirm('Yakin ingin menghapus data mahasiswa dengan NIM <?= htmlspecialchars($row['nim']); ?>?')"
-                                href="proses_delete.php?nim=<?= urlencode($row['nim']); ?>">Delete</a>
-                        </td>
-                        <td>
-                            <?= htmlspecialchars($row['nim']); ?>
-                        </td>
-                        <td>
-                            <?= htmlspecialchars($row['nama_lengkap']); ?>
-                        </td>
-                        <td>
-                            <?= htmlspecialchars($row['tempat_lahir']); ?>
-                        </td>
-                        <td>
-                            <?= htmlspecialchars($row['tanggal_lahir']); ?>
-                        </td>
-                        <td>
-                            <?= htmlspecialchars($row['hobi']); ?>
-                        </td>
-                        <td>
-                            <?= htmlspecialchars($row['pasangan']); ?>
-                        </td>
-                        <td>
-                            <?= htmlspecialchars($row['pekerjaan']); ?>
-                        </td>
-                        <td>
-                            <?= htmlspecialchars($row['nama_ortu']); ?>
-                        </td>
-                        <td>
-                            <?= htmlspecialchars($row['nama_kakak']); ?>
-                        </td>
-                        <td>
-                            <?= htmlspecialchars($row['nama_adik']); ?>
-                        </td>
-                        <td>
-                            <?= formatTanggal(htmlspecialchars($row['created_at'])); ?>
-                        </td>
-                    </tr>
-                <?php endwhile; ?>
-            </table>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Tryout UAS PWD - CRUD Biodata Mahasiswa</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>No</th>
+    <th>Aksi</th>
+    <th>ID</th>
+    <th>Nama</th>
+    <th>Email</th>
+    <th>Pesan</th>
+    <th>Created At</th>
+  </tr>
+  <?php $i = 1; ?>
+  <?php while ($row = mysqli_fetch_assoc($q)): ?>
+    <tr>
+      <td><?= $i++ ?></td>
+      <td>
+        <a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
+        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
+      </td>
+      <td><?= $row['cid']; ?></td>
+      <td><?= htmlspecialchars($row['cnama']); ?></td>
+      <td><?= htmlspecialchars($row['cemail']); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
+      <td><?= formatTanggal(htmlspecialchars($row['dcreated_at'])); ?></td>
+    </tr>
+  <?php endwhile; ?>
+</table>
