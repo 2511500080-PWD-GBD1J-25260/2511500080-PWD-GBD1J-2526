@@ -6,7 +6,7 @@ Nim: 251150080<br>
 <ol>
 <li>Unduh bahan tryout UAS PWD dan ekstrak ke dalam folder pertemuan 15</li>
 <li>membuat tabel baru di phpmyadmin</li>
-
+<li>membuat tabel biodata diread.php</li>
 
 
 
