@@ -12,4 +12,5 @@ Nim: 251150080<br>
 <li>menambahkan kode baru di file proses update</li>
 <li>menambahkan tombol edit dan delete</li>
 <li>menambahkan validasi pada delete_biodata</li>
+<li>menambahkan kode flash sukses/gagal</li>
 <ol>
