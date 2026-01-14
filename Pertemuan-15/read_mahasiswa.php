@@ -1,0 +1,74 @@
+<?php
+  #File pembaca untuk menampilkan data biodata mahasiswa
+  if (!isset($conn)) {
+    require 'koneksi.php';
+  }
+  
+  $sql = "SELECT * FROM tbl_mahasiswa ORDER BY nim DESC";
+  $q = mysqli_query($conn, $sql);
+  if (!$q) {
+    die("Query error: " . mysqli_error($conn));
+  }
+?>
+
+<?php
+  $flash_sukses = $_SESSION['flash_sukses_mhs'] ?? ''; #jika query sukses
+  $flash_error  = $_SESSION['flash_error_mhs'] ?? ''; #jika ada error
+  #bersihkan session ini
+  unset($_SESSION['flash_sukses_mhs'], $_SESSION['flash_error_mhs']); 
+?>
+
+<?php if (!empty($flash_sukses)): ?>
+        <div style="padding:10px; margin-bottom:10px; 
+          background:#d4edda; color:#155724; border-radius:6px;">
+          <?= $flash_sukses; ?>
+        </div>
+<?php endif; ?>
+
+<?php if (!empty($flash_error)): ?>
+        <div style="padding:10px; margin-bottom:10px; 
+          background:#f8d7da; color:#721c24; border-radius:6px;">
+          <?= $flash_error; ?>
+        </div>
+<?php endif; ?>
+
+<div style="overflow-x: auto; margin-top: 10px;">
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>No</th>
+    <th>Aksi</th>
+    <th>NIM</th>
+    <th>Nama Lengkap</th>
+    <th>Tempat Lahir</th>
+    <th>Tanggal Lahir</th>
+    <th>Hobi</th>
+    <th>Pasangan</th>
+    <th>Pekerjaan</th>
+    <th>Nama Orang Tua</th>
+    <th>Nama Kakak</th>
+    <th>Nama Adik</th>
+    <th>Created At</th>
+  </tr>
+  <?php $i = 1; ?>
+  <?php while ($row = mysqli_fetch_assoc($q)): ?>
+    <tr>
+      <td><?= $i++ ?></td>
+      <td>
+        <a href="edit_mahasiswa.php?nim=<?= urlencode($row['nim']); ?>">Edit</a>
+        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama_lengkap']); ?>?')" href="proses_delete_mahasiswa.php?nim=<?= urlencode($row['nim']); ?>">Delete</a>
+      </td>
+      <td><?= htmlspecialchars($row['nim']); ?></td>
+      <td><?= htmlspecialchars($row['cnama_lengkap']); ?></td>
+      <td><?= htmlspecialchars($row['ctempat_lahir']); ?></td>
+      <td><?= htmlspecialchars($row['dtanggal_lahir']); ?></td>
+      <td><?= htmlspecialchars($row['chobi']); ?></td>
+      <td><?= htmlspecialchars($row['cpasangan']); ?></td>
+      <td><?= htmlspecialchars($row['cpekerjaan']); ?></td>
+      <td><?= htmlspecialchars($row['cnama_ortu']); ?></td>
+      <td><?= htmlspecialchars($row['cnama_kakak']); ?></td>
+      <td><?= htmlspecialchars($row['cnama_adik']); ?></td>
+      <td><?= formatTanggal(htmlspecialchars($row['dcreated_at'])); ?></td>
+    </tr>
+  <?php endwhile; ?>
+</table>
+</div>

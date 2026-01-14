@@ -45,6 +45,27 @@ INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUE
 (20, 'Nur Faddddd', 'a@gmail.com', 'sadadas faedfasd', '2025-12-24 12:21:52'),
 (21, 'nicolas lim', 'sada@i.com', 'kskakds a da', '2025-12-24 12:22:04');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_mahasiswa`
+--
+
+CREATE TABLE `tbl_mahasiswa` (
+  `nim` varchar(20) NOT NULL,
+  `cnama_lengkap` varchar(100) DEFAULT NULL,
+  `ctempat_lahir` varchar(50) DEFAULT NULL,
+  `dtanggal_lahir` date DEFAULT NULL,
+  `chobi` varchar(100) DEFAULT NULL,
+  `cpasangan` varchar(100) DEFAULT NULL,
+  `cpekerjaan` varchar(100) DEFAULT NULL,
+  `cnama_ortu` varchar(100) DEFAULT NULL,
+  `cnama_kakak` varchar(100) DEFAULT NULL,
+  `cnama_adik` varchar(100) DEFAULT NULL,
+  `dcreated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
 --
 -- Indexes for dumped tables
 --
@@ -54,6 +75,13 @@ INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUE
 --
 ALTER TABLE `tbl_tamu`
   ADD PRIMARY KEY (`cid`);
+
+--
+-- Indexes for table `tbl_mahasiswa`
+--
+ALTER TABLE `tbl_mahasiswa`
+  ADD PRIMARY KEY (`nim`);
+
 
 --
 -- AUTO_INCREMENT for dumped tables

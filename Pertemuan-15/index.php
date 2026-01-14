@@ -38,53 +38,89 @@ require_once __DIR__ . '/fungsi.php';
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
+    <?php
+    $flash_sukses_biodata = $_SESSION['flash_sukses_biodata'] ?? '';
+    $flash_error_biodata  = $_SESSION['flash_error_biodata'] ?? '';
+    $old_biodata = $_SESSION['old_biodata'] ?? [];
+
+    unset($_SESSION['flash_sukses_biodata'], $_SESSION['flash_error_biodata'], $_SESSION['old_biodata']);
+    ?>
+
     <section id="biodata">
       <h2>Biodata Sederhana Mahasiswa</h2>
+
+      <?php if (!empty($flash_sukses_biodata)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px;">
+          <?= $flash_sukses_biodata; ?>
+        </div>
+      <?php endif; ?>
+
+      <?php if (!empty($flash_error_biodata)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px;">
+          <?= $flash_error_biodata; ?>
+        </div>
+      <?php endif; ?>
+
       <form action="proses.php" method="POST">
 
         <label for="txtNim"><span>NIM:</span>
-          <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" required>
+          <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" required
+            value="<?= isset($old_biodata['nim']) ? htmlspecialchars($old_biodata['nim']) : '' ?>">
         </label>
 
         <label for="txtNmLengkap"><span>Nama Lengkap:</span>
-          <input type="text" id="txtNmLengkap" name="txtNmLengkap" placeholder="Masukkan Nama Lengkap" required>
+          <input type="text" id="txtNmLengkap" name="txtNmLengkap" placeholder="Masukkan Nama Lengkap" required
+            value="<?= isset($old_biodata['nama_lengkap']) ? htmlspecialchars($old_biodata['nama_lengkap']) : '' ?>">
         </label>
 
         <label for="txtT4Lhr"><span>Tempat Lahir:</span>
-          <input type="text" id="txtT4Lhr" name="txtT4Lhr" placeholder="Masukkan Tempat Lahir" required>
+          <input type="text" id="txtT4Lhr" name="txtT4Lhr" placeholder="Masukkan Tempat Lahir" required
+            value="<?= isset($old_biodata['tempat_lahir']) ? htmlspecialchars($old_biodata['tempat_lahir']) : '' ?>">
         </label>
 
         <label for="txtTglLhr"><span>Tanggal Lahir:</span>
-          <input type="text" id="txtTglLhr" name="txtTglLhr" placeholder="Masukkan Tanggal Lahir" required>
+          <input type="date" id="txtTglLhr" name="txtTglLhr" placeholder="Masukkan Tanggal Lahir" required
+            value="<?= isset($old_biodata['tanggal_lahir']) ? htmlspecialchars($old_biodata['tanggal_lahir']) : '' ?>">
         </label>
 
         <label for="txtHobi"><span>Hobi:</span>
-          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi" required>
+          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi" required
+            value="<?= isset($old_biodata['hobi']) ? htmlspecialchars($old_biodata['hobi']) : '' ?>">
         </label>
 
         <label for="txtPasangan"><span>Pasangan:</span>
-          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan" required>
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan" required
+            value="<?= isset($old_biodata['pasangan']) ? htmlspecialchars($old_biodata['pasangan']) : '' ?>">
         </label>
 
         <label for="txtKerja"><span>Pekerjaan:</span>
-          <input type="text" id="txtKerja" name="txtKerja" placeholder="Masukkan Pekerjaan" required>
+          <input type="text" id="txtKerja" name="txtKerja" placeholder="Masukkan Pekerjaan" required
+            value="<?= isset($old_biodata['pekerjaan']) ? htmlspecialchars($old_biodata['pekerjaan']) : '' ?>">
         </label>
 
         <label for="txtNmOrtu"><span>Nama Orang Tua:</span>
-          <input type="text" id="txtNmOrtu" name="txtNmOrtu" placeholder="Masukkan Nama Orang Tua" required>
+          <input type="text" id="txtNmOrtu" name="txtNmOrtu" placeholder="Masukkan Nama Orang Tua" required
+            value="<?= isset($old_biodata['nama_ortu']) ? htmlspecialchars($old_biodata['nama_ortu']) : '' ?>">
         </label>
 
         <label for="txtNmKakak"><span>Nama Kakak:</span>
-          <input type="text" id="txtNmKakak" name="txtNmKakak" placeholder="Masukkan Nama Kakak" required>
+          <input type="text" id="txtNmKakak" name="txtNmKakak" placeholder="Masukkan Nama Kakak" required
+            value="<?= isset($old_biodata['nama_kakak']) ? htmlspecialchars($old_biodata['nama_kakak']) : '' ?>">
         </label>
 
         <label for="txtNmAdik"><span>Nama Adik:</span>
-          <input type="text" id="txtNmAdik" name="txtNmAdik" placeholder="Masukkan Nama Adik" required>
+          <input type="text" id="txtNmAdik" name="txtNmAdik" placeholder="Masukkan Nama Adik" required
+            value="<?= isset($old_biodata['nama_adik']) ? htmlspecialchars($old_biodata['nama_adik']) : '' ?>">
         </label>
 
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
+
+      <br>
+      <hr>
+      <h2>Data Biodata Mahasiswa</h2>
+      <?php include 'read_mahasiswa.php'; ?>
     </section>
 
     <?php
