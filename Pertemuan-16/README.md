@@ -16,5 +16,5 @@ Saya mempelajari tentang:
 <li>Buat file  proses_update_biodata.php untuk memproses perubahan data dengan validasi, sanitasi, dan query UPDATE</li>
 <li>Buat fungsi hapus data pada link Delete di halaman read_biodata.php</li>
 <li>Buat file proses_delete_biodata.php</li>
-
+<li>Update file localhost.sql dengan struktur tabel baru tbl_biodata sebagai backup database project</li>
 <ol>
