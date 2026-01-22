@@ -17,4 +17,5 @@ Saya mempelajari tentang:
 <li>Buat fungsi hapus data pada link Delete di halaman read_biodata.php</li>
 <li>Buat file proses_delete_biodata.php</li>
 <li>Update file localhost.sql dengan struktur tabel baru tbl_biodata sebagai backup database project</li>
+<li>Import file localhost.sql terbaru ke database melalui phpMyAdmin untuk memastikan struktur tabel sudah terupdate</li>
 <ol>
