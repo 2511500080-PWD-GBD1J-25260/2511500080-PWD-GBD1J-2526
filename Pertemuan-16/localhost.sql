@@ -73,7 +73,7 @@ COMMIT;
 -- Tabel untuk menampung biodata pengunjung dari form #biodata
 --
 
-CREATE TABLE `tbl_biodata` (
+CREATE TABLE `tbl_imoet` (
   `bid` int NOT NULL,
   `bnim` varchar(20) DEFAULT NULL,
   `bnama` varchar(100) DEFAULT NULL,
@@ -89,15 +89,15 @@ CREATE TABLE `tbl_biodata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Indexes for table `tbl_biodata`
+-- Indexes for table `tbl_imoet`
 --
-ALTER TABLE `tbl_biodata`
+ALTER TABLE `tbl_imoet`
   ADD PRIMARY KEY (`bid`);
 
 --
--- AUTO_INCREMENT for table `tbl_biodata`
+-- AUTO_INCREMENT for table `tbl_imoet`
 --
-ALTER TABLE `tbl_biodata`
+ALTER TABLE `tbl_imoet`
   MODIFY `bid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
