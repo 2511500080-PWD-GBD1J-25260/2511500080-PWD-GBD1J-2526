@@ -20,16 +20,16 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 # Ambil dan bersihkan (sanitasi) nilai dari form biodata
-$nim      = bersihkan($_POST['txtNim'] ?? '');
-$nama     = bersihkan($_POST['txtNmLengkap'] ?? '');
-$tempat   = bersihkan($_POST['txtT4Lhr'] ?? '');
-$tanggal  = bersihkan($_POST['txtTglLhr'] ?? '');
+$kodepen     = bersihkan($_POST['txtkodepen'] ?? '');
+$nama     = bersihkan($_POST['txtnama'] ?? '');
+$alamat   = bersihkan($_POST['txtalamat'] ?? '');
+$tanggal  = bersihkan($_POST['txttanggal'] ?? '');
 $hobi     = bersihkan($_POST['txtHobi'] ?? '');
-$pasangan = bersihkan($_POST['txtPasangan'] ?? '');
-$kerja    = bersihkan($_POST['txtKerja'] ?? '');
-$ortu     = bersihkan($_POST['txtNmOrtu'] ?? '');
-$kakak    = bersihkan($_POST['txtNmKakak'] ?? '');
-$adik     = bersihkan($_POST['txtNmAdik'] ?? '');
+$s1ta = bersihkan($_POST['txts1ta'] ?? '');
+$pekerjaan   = bersihkan($_POST['txtpekerjaan'] ?? '');
+$ortu     = bersihkan($_POST['txtortu'] ?? '');
+$pacar   = bersihkan($_POST['txtpacar'] ?? '');
+$mantan     = bersihkan($_POST['txtmantan'] ?? '');
 
 # Validasi sederhana
 $errors = []; # Array untuk menampung semua error
@@ -83,16 +83,16 @@ if ($adik === '') {
 # Jika ada error, simpan nilai lama dan pesan error, lalu redirect (PRG)
 if (!empty($errors)) {
   $_SESSION['old_biodata'] = [
-    'nim'      => $nim,
+   'kodepen'      => $kodepen,
     'nama'     => $nama,
-    'tempat'   => $tempat,
+    'alamat'   => $alamat,
     'tanggal'  => $tanggal,
     'hobi'     => $hobi,
-    'pasangan' => $pasangan,
-    'kerja'    => $kerja,
+    's1ta' => $s1ta,
+    'pekerjaan'    => $pekerjaan,
     'ortu'     => $ortu,
-    'kakak'    => $kakak,
-    'adik'     => $adik,
+    'pacar'    => $pacar,
+    'mantan'     => $mantan,
   ];
 
   $_SESSION['flash_error_biodata'] = implode('<br>', $errors);
@@ -124,16 +124,16 @@ if (mysqli_stmt_execute($stmt)) {
 } else {
   # Jika gagal, simpan kembali old value dan tampilkan error
   $_SESSION['old_biodata'] = [
-    'nim'      => $nim,
+   'kodepen'      => $kodepen,
     'nama'     => $nama,
-    'tempat'   => $tempat,
+    'alamat'   => $alamat,
     'tanggal'  => $tanggal,
     'hobi'     => $hobi,
-    'pasangan' => $pasangan,
-    'kerja'    => $kerja,
+    's1ta' => $s1ta,
+    'pekerjaan'    => $pekerjaan,
     'ortu'     => $ortu,
-    'kakak'    => $kakak,
-    'adik'     => $adik,
+    'pacar'    => $pacar,
+    'mantan'     => $mantan,
   ];
   $_SESSION['flash_error_biodata'] = 'Data gagal disimpan. Silakan coba lagi.';
   redirect_ke('index.php#biodata');

@@ -93,16 +93,16 @@ if ($adik === '') {
 # Jika ada error, simpan nilai lama dan pesan error, lalu redirect (PRG)
 if (!empty($errors)) {
   $_SESSION['old_biodata'] = [
-    'nim'      => $nim,
+   'kodepen'      => $kodepen,
     'nama'     => $nama,
-    'tempat'   => $tempat,
+    'alamat'   => $alamat,
     'tanggal'  => $tanggal,
     'hobi'     => $hobi,
-    'pasangan' => $pasangan,
-    'kerja'    => $kerja,
+    's1ta' => $s1ta,
+    'pekerjaan'    => $pekerjaan,
     'ortu'     => $ortu,
-    'kakak'    => $kakak,
-    'adik'     => $adik,
+    'pacar'    => $pacar,
+    'mantan'     => $mantan,
   ];
 
   $_SESSION['flash_error_biodata'] = implode('<br>', $errors);
