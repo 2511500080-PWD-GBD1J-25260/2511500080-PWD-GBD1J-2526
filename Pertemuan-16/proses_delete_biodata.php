@@ -22,20 +22,20 @@ $bid = filter_input(INPUT_GET, 'bid', FILTER_VALIDATE_INT, [
 ]);
 
 if (!$bid) {
-  $_SESSION['flash_error_biodata'] = 'ID Biodata tidak valid.';
-  redirect_ke('read_biodata.php');
+  $_SESSION['flash_error_imoet'] = 'ID imoet tidak valid.';
+  redirect_ke('read_imoet.php');
 }
 
 /**
  * Prepared statement untuk anti SQL injection
  * Query DELETE dengan WHERE bid = ?
  */
-$stmt = mysqli_prepare($conn, "DELETE FROM tbl_biodata WHERE bid = ?");
+$stmt = mysqli_prepare($conn, "DELETE FROM tbl_imoet WHERE bid = ?");
 
 if (!$stmt) {
   # Jika gagal prepare, kirim pesan error
-  $_SESSION['flash_error_biodata'] = 'Terjadi kesalahan sistem (prepare gagal).';
-  redirect_ke('read_biodata.php');
+  $_SESSION['flash_error_imoet'] = 'Terjadi kesalahan sistem (prepare gagal).';
+  redirect_ke('read_imoet.php');
 }
 
 # Bind parameter dan eksekusi (i = integer)
@@ -43,14 +43,14 @@ mysqli_stmt_bind_param($stmt, "i", $bid);
 
 if (mysqli_stmt_execute($stmt)) {
   # Jika berhasil, redirect dengan pesan sukses
-  $_SESSION['flash_sukses_biodata'] = 'Biodata berhasil dihapus.';
+  $_SESSION['flash_sukses_imoet'] = 'Biodata berhasil dihapus.';
 } else {
   # Jika gagal, tampilkan error
-  $_SESSION['flash_error_biodata'] = 'Data gagal dihapus. Silakan coba lagi.';
+  $_SESSION['flash_error_imoet'] = 'Data gagal dihapus. Silakan coba lagi.';
 }
 
 # Tutup statement
 mysqli_stmt_close($stmt);
 
 # Redirect ke halaman pembaca (PRG pattern)
-redirect_ke('read_biodata.php');
+redirect_ke('read_imoet.php');

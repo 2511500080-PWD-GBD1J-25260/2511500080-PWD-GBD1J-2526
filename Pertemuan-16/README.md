@@ -8,4 +8,5 @@ Saya mempelajari tentang:
 <li>unduh dan ekstrak bahan uas di elearning</li>
 <li>membuat database baru tbl_imoet</li>
 <li>buat sql di tbl_imoet</li>
+<li>Modifikasi form pada halaman index.php</li>
 <ol>

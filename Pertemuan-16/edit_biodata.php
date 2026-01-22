@@ -24,17 +24,17 @@ $bid = filter_input(INPUT_GET, 'bid', FILTER_VALIDATE_INT, [
 
 # Jika bid tidak valid, redirect ke halaman pembaca
 if (!$bid) {
-  $_SESSION['flash_error_biodata'] = 'Akses tidak valid.';
-  redirect_ke('read_biodata.php');
+  $_SESSION['flash_error_imoet'] = 'Akses tidak valid.';
+  redirect_ke('read_imoet.php');
 }
 
 /**
  * Ambil data dari database menggunakan prepared statement
  */
-$stmt = mysqli_prepare($conn, "SELECT * FROM tbl_biodata WHERE bid = ? LIMIT 1");
+$stmt = mysqli_prepare($conn, "SELECT * FROM tbl_imoet WHERE bid = ? LIMIT 1");
 if (!$stmt) {
-  $_SESSION['flash_error_biodata'] = 'Query tidak benar.';
-  redirect_ke('read_biodata.php');
+  $_SESSION['flash_error_imoet'] = 'Query tidak benar.';
+  redirect_ke('read_imoet.php');
 }
 
 mysqli_stmt_bind_param($stmt, "i", $bid);
@@ -45,8 +45,8 @@ mysqli_stmt_close($stmt);
 
 # Jika data tidak ditemukan
 if (!$row) {
-  $_SESSION['flash_error_biodata'] = 'Record tidak ditemukan.';
-  redirect_ke('read_biodata.php');
+  $_SESSION['flash_error_imoet'] = 'Record tidak ditemukan.';
+  redirect_ke('read_imoet.php');
 }
 
 # Nilai awal dari database (prefill form)
@@ -62,9 +62,9 @@ $kakak    = $row['bkakak'] ?? '';
 $adik     = $row['badik'] ?? '';
 
 # Ambil error dan nilai old input jika ada (dari validasi gagal)
-$flash_error = $_SESSION['flash_error_biodata'] ?? '';
-$old = $_SESSION['old_biodata'] ?? [];
-unset($_SESSION['flash_error_biodata'], $_SESSION['old_biodata']);
+$flash_error = $_SESSION['flash_error_imoet'] ?? '';
+$old = $_SESSION['old_imoet'] ?? [];
+unset($_SESSION['flash_error_imoet'], $_SESSION['old_imoet']);
 
 # Jika ada old value, gunakan untuk prefill
 if (!empty($old)) {
