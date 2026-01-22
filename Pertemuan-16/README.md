@@ -10,4 +10,7 @@ Saya mempelajari tentang:
 <li>buat sql di tbl_imoet</li>
 <li>Modifikasi form pada halaman index.php</li>
 <li>Buat file proses_biodata.php</li>
+<li>Tambahkan query INSERT dengan prepared statement untuk menyimpan data ke tabel tbl_imoet</li>
+<li>
+<li>
 <ol>

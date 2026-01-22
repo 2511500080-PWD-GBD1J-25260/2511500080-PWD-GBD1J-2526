@@ -14,18 +14,18 @@ require 'koneksi.php';
 require 'fungsi.php';
 
 # Query untuk mengambil semua data biodata
-$sql = "SELECT * FROM tbl_biodata ORDER BY bid DESC";
+$sql = "SELECT * FROM tbl_imoet ORDER BY bid DESC";
 $q = mysqli_query($conn, $sql);
 if (!$q) {
   die("Query error: " . mysqli_error($conn));
 }
 
 # Ambil flash message jika ada
-$flash_sukses = $_SESSION['flash_sukses_biodata'] ?? '';
-$flash_error  = $_SESSION['flash_error_biodata'] ?? '';
+$flash_sukses = $_SESSION['flash_sukses_imoet'] ?? '';
+$flash_error  = $_SESSION['flash_error_imoet'] ?? '';
 
 # Bersihkan session flash message
-unset($_SESSION['flash_sukses_biodata'], $_SESSION['flash_error_biodata']);
+unset($_SESSION['flash_sukses_imoet'], $_SESSION['flash_error_imoet']);
 ?>
 
 <!DOCTYPE html>
