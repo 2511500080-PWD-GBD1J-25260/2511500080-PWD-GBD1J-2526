@@ -128,16 +128,16 @@ require_once __DIR__ . '/fungsi.php';
     $biodata = $_SESSION["biodata"] ?? [];
 
     $fieldConfig = [
-      "nim" => ["label" => "NIM:", "suffix" => ""],
-      "nama" => ["label" => "Nama Lengkap:", "suffix" => " &#128526;"],
-      "tempat" => ["label" => "Tempat Lahir:", "suffix" => ""],
-      "tanggal" => ["label" => "Tanggal Lahir:", "suffix" => ""],
+      "kodepen" => ["label" => "Kode Pengunjung:", "suffix" => ""],
+      "nama" => ["label" => "Nama Pengunjung:", "suffix" => " &#128526;"],
+      "alamat" => ["label" => "Alamat Rumah:", "suffix" => ""],
+      "tanggal" => ["label" => "Tanggal Kunjungan:", "suffix" => ""],
       "hobi" => ["label" => "Hobi:", "suffix" => " &#127926;"],
-      "pasangan" => ["label" => "Pasangan:", "suffix" => " &hearts;"],
+      "slta" => ["label" => "Asal SLTA:", "suffix" => " &hearts;"],
       "pekerjaan" => ["label" => "Pekerjaan:", "suffix" => " &copy; 2025"],
       "ortu" => ["label" => "Nama Orang Tua:", "suffix" => ""],
-      "kakak" => ["label" => "Nama Kakak:", "suffix" => ""],
-      "adik" => ["label" => "Nama Adik:", "suffix" => ""],
+      "pacar" => ["label" => "Nama Pacar:", "suffix" => ""],
+      "mantan" => ["label" => "Nama Mantan:", "suffix" => ""],
     ];
     ?>
 

@@ -171,13 +171,14 @@ unset($_SESSION['flash_sukses_imoet'], $_SESSION['flash_error_imoet']);
           <th>No</th>
           <th>Aksi</th>
           <th>ID</th>
-          <th>NIM</th>
+          <th>Kodepen</th>
           <th>Nama</th>
-          <th>Tempat Lahir</th>
-          <th>Tanggal Lahir</th>
+          <th>Alamat</th>
+          <th>Tanggal</th>
           <th>Hobi</th>
-          <th>Pasangan</th>
+          <th>S1TA</th>
           <th>Pekerjaan</th>
+          <th>Mantan</th>
           <th>Created At</th>
         </tr>
         <?php $i = 1; ?>
@@ -198,14 +199,15 @@ unset($_SESSION['flash_sukses_imoet'], $_SESSION['flash_error_imoet']);
                    href="proses_delete_biodata.php?bid=<?= (int)$row['bid']; ?>">Delete</a>
               </td>
               <td><?= $row['bid']; ?></td>
-              <td><?= htmlspecialchars($row['bnim']); ?></td>
+              <td><?= htmlspecialchars($row['bkodepen']); ?></td>
               <td><?= htmlspecialchars($row['bnama']); ?></td>
-              <td><?= htmlspecialchars($row['btempat_lahir']); ?></td>
-              <td><?= htmlspecialchars($row['btgl_lahir']); ?></td>
+              <td><?= htmlspecialchars($row['balamat']); ?></td>
+              <td><?= htmlspecialchars($row['tanggal']); ?></td>
               <td><?= htmlspecialchars($row['bhobi']); ?></td>
-              <td><?= htmlspecialchars($row['bpasangan']); ?></td>
-              <td><?= htmlspecialchars($row['bpekerjaan']); ?></td>
-              <td><?= formatTanggal($row['dcreated_at']); ?></td>
+              <td><?= htmlspecialchars($row['bs1ta']); ?></td>
+              <td><?= htmlspecialchars($row['bmantan']); ?></td>
+              <td><?= htmlspecialchars($row['bcreated_at']); ?></td>
+              <td><?= formatTanggal($row['bcreated_at']); ?></td>
             </tr>
           <?php endwhile; ?>
         <?php endif; ?>

@@ -75,16 +75,16 @@ COMMIT;
 
 CREATE TABLE `tbl_imoet` (
   `bid` int NOT NULL,
-  `bnim` varchar(20) DEFAULT NULL,
+  `bkodepen` varchar(20) DEFAULT NULL,
   `bnama` varchar(100) DEFAULT NULL,
-  `btempat_lahir` varchar(100) DEFAULT NULL,
-  `btgl_lahir` varchar(50) DEFAULT NULL,
+  `balamat` varchar(100) DEFAULT NULL,
+  `btanggal` varchar(50) DEFAULT NULL,
   `bhobi` varchar(100) DEFAULT NULL,
-  `bpasangan` varchar(100) DEFAULT NULL,
+  `bs1ta` varchar(100) DEFAULT NULL,
   `bpekerjaan` varchar(100) DEFAULT NULL,
   `bortu` varchar(100) DEFAULT NULL,
-  `bkakak` varchar(100) DEFAULT NULL,
-  `badik` varchar(100) DEFAULT NULL,
+  `bpacar` varchar(100) DEFAULT NULL,
+  `bmantan` varchar(100) DEFAULT NULL,
   `dcreated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

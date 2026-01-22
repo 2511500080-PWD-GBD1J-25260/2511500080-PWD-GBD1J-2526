@@ -138,16 +138,16 @@ if (mysqli_stmt_execute($stmt)) {
 } else {
   # Jika gagal, simpan kembali old value dan tampilkan error
   $_SESSION['old_imoet'] = [
-    'nim'      => $nim,
+    'kodepen'      => $kodepen,
     'nama'     => $nama,
-    'tempat'   => $tempat,
+    'alamat'   => $alamat,
     'tanggal'  => $tanggal,
     'hobi'     => $hobi,
-    'pasangan' => $pasangan,
-    'kerja'    => $kerja,
+    's1ta' => $s1ta,
+    'pekerjaan'    => $pekerjaan,
     'ortu'     => $ortu,
-    'kakak'    => $kakak,
-    'adik'     => $adik,
+    'pacar'    => $pacar,
+    'mantan'     => $mantan,
   ];
   $_SESSION['flash_error_biodata'] = 'Data gagal diperbaharui. Silakan coba lagi.';
   redirect_ke('edit_biodata.php?bid=' . (int)$bid);

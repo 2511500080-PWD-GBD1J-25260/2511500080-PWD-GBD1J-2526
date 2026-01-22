@@ -94,16 +94,16 @@ if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesa
 mysqli_stmt_close($stmt);
 
 $arrBiodata = [
-  "nim" => $_POST["txtNim"] ?? "",
-  "nama" => $_POST["txtNmLengkap"] ?? "",
-  "tempat" => $_POST["txtT4Lhr"] ?? "",
-  "tanggal" => $_POST["txtTglLhr"] ?? "",
+  "kodepen" => $_POST["txtKodePen"] ?? "",
+  "nama" => $_POST["txtNmPengunjung"] ?? "",
+  "alamat" => $_POST["txtAlRmh"] ?? "",
+  "tanggal" => $_POST["txtTglKunjungan"] ?? "",
   "hobi" => $_POST["txtHobi"] ?? "",
-  "pasangan" => $_POST["txtPasangan"] ?? "",
+  "slta" => $_POST["txtAsalSMA"] ?? "",
   "pekerjaan" => $_POST["txtKerja"] ?? "",
   "ortu" => $_POST["txtNmOrtu"] ?? "",
-  "kakak" => $_POST["txtNmKakak"] ?? "",
-  "adik" => $_POST["txtNmAdik"] ?? ""
+  "pacar" => $_POST["txtNmPacar"] ?? "",
+  "mantan" => $_POST["txtNmMantan"] ?? ""
 ];
 $_SESSION["biodata"] = $arrBiodata;
 
