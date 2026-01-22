@@ -15,8 +15,8 @@ require_once __DIR__ . '/fungsi.php';
 
 # Cek method form, hanya izinkan POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-  $_SESSION['flash_error_biodata'] = 'Akses tidak valid.';
-  redirect_ke('read_biodata.php');
+  $_SESSION['flash_error_imoet'] = 'Akses tidak valid.';
+  redirect_ke('read_imoet.php');
 }
 
 # Validasi bid wajib angka dan > 0
@@ -25,8 +25,8 @@ $bid = filter_input(INPUT_POST, 'bid', FILTER_VALIDATE_INT, [
 ]);
 
 if (!$bid) {
-  $_SESSION['flash_error_biodata'] = 'ID Biodata tidak valid.';
-  redirect_ke('read_biodata.php');
+  $_SESSION['flash_error_imoet'] = 'ID Biodata tidak valid.';
+  redirect_ke('read_imoet.php');
 }
 
 # Ambil dan bersihkan (sanitasi) nilai dari form
@@ -113,15 +113,15 @@ if (!empty($errors)) {
  * Prepared statement untuk anti SQL injection
  * Query UPDATE dengan WHERE bid = ?
  */
-$stmt = mysqli_prepare($conn, "UPDATE tbl_biodata 
+$stmt = mysqli_prepare($conn, "UPDATE tbl_imoet 
   SET bnim = ?, bnama = ?, btempat_lahir = ?, btgl_lahir = ?, 
       bhobi = ?, bpasangan = ?, bpekerjaan = ?, bortu = ?, bkakak = ?, badik = ?
   WHERE bid = ?");
 
 if (!$stmt) {
   # Jika gagal prepare, kirim pesan error
-  $_SESSION['flash_error_biodata'] = 'Terjadi kesalahan sistem (prepare gagal).';
-  redirect_ke('edit_biodata.php?bid=' . (int)$bid);
+  $_SESSION['flash_error_imoet'] = 'Terjadi kesalahan sistem (prepare gagal).';
+  redirect_ke('edit_imoet.php?bid=' . (int)$bid);
 }
 
 # Bind parameter dan eksekusi (s = string, i = integer)
@@ -131,13 +131,13 @@ mysqli_stmt_bind_param($stmt, "ssssssssssi",
 
 if (mysqli_stmt_execute($stmt)) {
   # Jika berhasil, kosongkan old value
-  unset($_SESSION['old_biodata']);
+  unset($_SESSION['old_imoet']);
   # Redirect ke read_biodata.php dengan pesan sukses
   $_SESSION['flash_sukses_biodata'] = 'Terima kasih, biodata Anda sudah diperbaharui.';
   redirect_ke('read_biodata.php'); # PRG: kembali ke halaman pembaca
 } else {
   # Jika gagal, simpan kembali old value dan tampilkan error
-  $_SESSION['old_biodata'] = [
+  $_SESSION['old_imoet'] = [
     'nim'      => $nim,
     'nama'     => $nama,
     'tempat'   => $tempat,

@@ -13,5 +13,5 @@ Saya mempelajari tentang:
 <li>Tambahkan query INSERT dengan prepared statement untuk menyimpan data ke tabel tbl_imoet</li>
 <li>Buat halaman read_biodata.php untuk menampilkan seluruh data biodata pengunjung dalam bentuk tabel lengkap dengan link Edit dan Delete</li>
 <li>Buat halaman edit_biodata.php dengan form edit yang sudah terisi data lama</li>
-<li>
+<li>Buat file  proses_update_biodata.php untuk memproses perubahan data dengan validasi, sanitasi, dan query UPDATE</li>
 <ol>
