@@ -9,4 +9,5 @@ Saya mempelajari tentang:
 <li>membuat database baru tbl_imoet</li>
 <li>buat sql di tbl_imoet</li>
 <li>Modifikasi form pada halaman index.php</li>
+<li>Buat file proses_biodata.php</li>
 <ol>
