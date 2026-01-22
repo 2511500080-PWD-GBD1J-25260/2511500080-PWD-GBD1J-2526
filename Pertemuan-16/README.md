@@ -15,6 +15,6 @@ Saya mempelajari tentang:
 <li>Buat halaman edit_biodata.php dengan form edit yang sudah terisi data lama</li>
 <li>Buat file  proses_update_biodata.php untuk memproses perubahan data dengan validasi, sanitasi, dan query UPDATE</li>
 <li>Buat fungsi hapus data pada link Delete di halaman read_biodata.php</li>
-
+<li>Buat file proses_delete_biodata.php</li>
 
 <ol>
